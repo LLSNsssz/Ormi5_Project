@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HODU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="header-logo">
+            <img src="Group.png" alt="HODU-logo">
+        </div>
+        <nav class="header-nav">
+            <div class="header-nav-link">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Support</a>
+            </div>
+            <button class="color-button">Download</button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-text-main">
+                    Lorem Ipsum is simply
+                    dummy text of the printing and
+                </span>
+                <span class="hero-text-sub">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown
+                </span>
+            <button class="color-button">Download</button>
+            </div>
+            <div class="hero-image">
+                <img src="img_cat_png.png" alt="box-head-cat">
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="features-content">
+            <img src="img_4.png" alt="lying-down-cat">
+            <div class="features-txt">
+                <span class="features-text-main">
+                    Lorem Ipsum is simply
+                    dummy text of the printing and dummy text
+                </span>
+                <span class="features-text-sub">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-content">
+            <div class="gallery-txt">
+                <span class="gallery-txt-main">
+                    dummy text of the printing and dummy
+                </span>
+                <span class="gallery-txt-sub">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                </span>
+            </div>
+            <div class="gallery-img">
+                <img src="img_1-1.png" alt="cat1">
+                <img src="img_1-2.png" alt="cat2">
+                <img src="img_1-3.png" alt="cat3">
+                <img src="img_2-1.png" alt="cat4">
+                <img src="img_2-2.png" alt="cat5">
+                <img src="img_2-3.png" alt="cat6">
+                <img src="img_5.png" alt="cat7">
+                <img src="img_4.png" alt="cat8">
+            </div>
+            <div>
+                Continue exploring HODU
+            </div>
+            <button class="show-more-btn color-button">Show more</button>
+            <button class="">Close</button>
+            <script>
+                const showMoreBtn = document.querySelector('.gallery-content button');
+                const closeBtn = document.querySelector();
+                const moreImg = document.querySelector('.gallery-img :nth-child(6) ~ :nth-child(n+6)');
+                const gallery = document.querySelector('.gallery-content')
+
+                    showMoreBtn.addEventListener('click', function () {
+                        moreImg.style.display = 'block'
+
+                        const closeImg = document.createElement('button')
+                        closeImg.append();
+                        gallery.appendChild(closeImg);
+                    });
+            </script>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <section class="info">
+        <div class="info-content">
+            <div class="info-txt">
+                <strong>
+                    Where you'll be
+                </strong>
+                <span class="address">
+                    330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
+                </span>
+            </div>
+            <div class="map"></div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="subscribe-content">
+            <div class="subscribe-text">
+                <span class="subscribe-text-main">
+                    Subscribe to our Blog post
+                </span>
+                <span class="subscribe-text-sub">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text
+                </span>
+            </div>
+            <form action="">
+                <input type="email" placeholder="Enter your e-mail address" id="e-mail" required>
+                <button class="subscribe-btn color-button">Subscribe</button>
+            </form>
+        </div>
+        <div class="modal-layout">
+            <div class="modal">
+                <div class="modal-content">
+                    <img src="cat%201.png" alt="cat-face">
+                    <strong>
+                        Thank you!
+                    </strong>
+                    <span>
+                        Lorem Ipsum is simply dummy text of the printing industry.
+                    </span>
+                    <form action="">
+                        <input type="email">
+                        <button class="modal-close-btn color-button">OK! I LOVE HOD</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            const modal = document.querySelector('.modal-layout');
+            const modalOpenBtn = document.querySelector('.subscribe-btn');
+            const modalCloseBtn = document.querySelector('.modal-close-btn');
+            const subForm = document.querySelector('form');
+
+            subForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                modal.style.display = 'block';
+                window.style.display = 'blur';
+            });
+            
+            modalCloseBtn.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+        </script>
+
+        <button class="scroll-top-btn"><img src="scroll-top-btn-before.png" alt="scroll-top"></button>
+        <script>
+            const topBtn = document.querySelector('.scroll-top-btn');
+
+            topBtn.addEventListener('click', function () {
+                document.body.scrollIntoView({behavior: 'auto'});
+            });
+        </script>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="Logo-fin.png" alt="HODU-logo">
+        </div>
+        <nav class="footer-nav">
+            <img src="icon-blog.png" alt="">
+            <img src="icon-facebook.png" alt="">
+            <img src="icon-insta.png" alt="">
+            <img src="icon-youtube.png" alt="">
+        </nav>
+    </div>
+</footer>
+<script>
+</script>
+</body>
+</html>
