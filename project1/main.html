@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HODU</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
 <header>
@@ -14,6 +17,9 @@
         <div class="header-logo">
             <img src="img/Group.png" alt="HODU-logo">
         </div>
+        <nav class="header-nav-mobile">
+            <img src="img/menu.svg" alt="moblie-nav">
+        </nav>
         <nav class="header-nav">
             <div class="header-nav-link">
                 <a href="#">Home</a>
@@ -65,6 +71,7 @@
         </div>
     </div>
 
+    <!--사진-->
     <div class="gallery">
         <div class="gallery-content">
             <div class="gallery-txt">
@@ -76,40 +83,59 @@
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                 </span>
             </div>
-            <div class="gallery-img">
-                <img src="img/img_1-1.png" alt="cat1">
-                <img src="img/img_1-2.png" alt="cat2">
-                <img src="img/img_1-3.png" alt="cat3">
-                <img src="img/img_2-1.png" alt="cat4">
-                <img src="img/img_2-2.png" alt="cat5">
-                <img src="img/img_2-3.png" alt="cat6">
-                <img src="img/img_5.png" alt="cat7">
-                <img src="img/img_4.png" alt="cat8">
-            </div>
+            <ul class="gallery-img">
+                <li><img src="img/img_1-1.png" alt="cat1"></li>
+                <li><img src="img/img_1-2.png" alt="cat2"></li>
+                <li><img src="img/img_1-3.png" alt="cat3"></li>
+                <li><img src="img/img_2-1.png" alt="cat4"></li>
+                <li><img src="img/img_2-2.png" alt="cat5"></li>
+                <li><img src="img/img_2-3.png" alt="cat6"></li>
+            </ul>
             <div>
                 Continue exploring HODU
             </div>
-            <button class="show-more-btn color-button">Show more</button>
-            <button class="">Close</button>
+            <button type="button" class="show-more-btn color-button">Show more</button>
             <script>
-                const showMoreBtn = document.querySelector('.gallery-content button');
-                const closeBtn = document.querySelector();
-                const moreImg = document.querySelector('.gallery-img :nth-child(6) ~ :nth-child(n+6)');
-                const gallery = document.querySelector('.gallery-content')
+                const listPic = document.querySelector('.gallery-img');
+                const btn = document.querySelector('.show-more-btn');
+                let pageToPatch = 1;
 
-                    showMoreBtn.addEventListener('click', function () {
-                        moreImg.style.display = 'block'
+                btn.addEventListener('click', ()=>{fetchImages(pageToPatch += 6)});
 
-                        const closeImg = document.createElement('button')
-                        closeImg.append();
-                        gallery.appendChild(closeImg);
+                async function fetchImages(skip) {
+
+                    try {
+                        const response = await fetch(`https://cataas.com/api/cats?tags=cute&skip=${skip}&limit=6`);
+
+                        if (!response.ok) {
+                            throw new Error('네트워크 응답에 문제가 있습니다.')
+                        }
+
+                        // 제이슨 데이터를 자바 스크립트 객체로 파싱
+                        const datas = await response.json();
+                        makeImageList(datas);
+
+                        console.log(datas);
+
+
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+                function makeImageList(datas) {
+                    datas.forEach((data) => {
+                        const imageUrl = `https://cataas.com/cat/${data.tags}`;
+                        listPic.insertAdjacentHTML('beforeend', `<li class="img-width"><img src="${imageUrl}" alt=""></li>`);
                     });
+                }
+
             </script>
         </div>
     </div>
 
     <div class="section-divider"></div>
 
+    <!--지도-->
     <section class="info">
         <div class="info-content">
             <div class="info-txt">
@@ -120,10 +146,29 @@
                     330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
                 </span>
             </div>
-            <div class="map"></div>
+
+            <div class="map" style="width:100%;max-width: 2664px;height:400px;"></div>
         </div>
     </section>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9982c9e1b4434a894713285c4ad7531"></script>
+    <script>
+        const container = document.querySelector('.map');
+        const options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        }
+        const map = new kakao.maps.Map(container, options);
 
+        const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+
+        const marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        marker.setMap(map);
+    </script>
+
+    <!--구독-->
     <section class="subscribe">
         <div class="subscribe-content">
             <div class="subscribe-text">
@@ -135,9 +180,9 @@
                     Lorem Ipsum has been the industry's standard dummy text
                 </span>
             </div>
-            <form action="">
-                <input type="email" placeholder="Enter your e-mail address" id="e-mail" required>
-                <button class="subscribe-btn color-button">Subscribe</button>
+            <form class="fake-form" action="">
+                <input class="fake-input" type="email" placeholder="Enter your e-mail address" required>
+                <button type="submit" class="subscribe-btn color-button">Subscribe</button>
             </form>
         </div>
         <div class="modal-layout">
@@ -150,8 +195,8 @@
                     <span>
                         Lorem Ipsum is simply dummy text of the printing industry.
                     </span>
-                    <form action="">
-                        <input type="email">
+                    <form class="real-form" action="">
+                        <input class="real-input" type="email">
                         <button class="modal-close-btn color-button">OK! I LOVE HOD</button>
                     </form>
                 </div>
@@ -159,17 +204,19 @@
         </div>
         <script>
             const modal = document.querySelector('.modal-layout');
-            const modalOpenBtn = document.querySelector('.subscribe-btn');
             const modalCloseBtn = document.querySelector('.modal-close-btn');
             const subForm = document.querySelector('form');
+            const realInput = document.querySelector('.real-input');
+            const fakeInput = document.querySelector('.fake-input')
 
             subForm.addEventListener('submit', function (event) {
                 event.preventDefault();
 
+                realInput.value = fakeInput.value;
                 modal.style.display = 'block';
                 window.style.display = 'blur';
             });
-            
+
             modalCloseBtn.addEventListener('click', function () {
                 modal.style.display = 'none';
             });
@@ -183,7 +230,6 @@
                 document.body.scrollIntoView({behavior: 'auto'});
             });
         </script>
-
     </section>
 </main>
 
@@ -200,7 +246,5 @@
         </nav>
     </div>
 </footer>
-<script>
-</script>
 </body>
 </html>

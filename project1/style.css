@@ -9,6 +9,13 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 
 /* 공통 클래스 */
@@ -39,266 +46,10 @@ body {
     overflow-x: hidden;overflow-y: auto;
 
     font-family: Pretendard, sans-serif;
-
 }
 
-/*헤더*/
-header {
-    display: flex;
-    justify-content: center;
-
-    padding: 31px 0;
-    background: #F2E9D8;
-
-}
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 70%;
-}
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-.header-nav-link {
-    display: flex;
-    justify-content: space-around;
-
-    width: 205px;
-    padding-right: 50px;
-}
-.header-nav-link a {
-    text-decoration: none;
-    color: #000000;
-}
-
-/*메인*/
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-
-}
-/**/
-.hero {
-    display: flex;
-    justify-content: center;
-
-    background: #F2E9D8;
-}
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-
-    width: 70%;
-    max-width: 2664px;
-}
-/*고양이 옆 텍스트*/
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    gap: 50px;
-}
-/*고양이 사진*/
-.hero-image {
-    display: flex;
-    align-items: flex-end;
-}
-.hero-text-main {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 60px;
-    width: 695px;
-}
-.hero-text-sub {
-    width: 420px;
-}
-
-
-/**/
-.features {
-    display: flex;
-    justify-content: center;
-}
-
-.features-content {
-    display: flex;
-    align-items: center;
-
-    width: 70%;
-    max-width: 2664px;
-}
-.features-txt {
-    display: flex;
-    flex-direction: column;
-
-    gap: 100px;
-}
-
-/*사진 모음*/
-.gallery {
-    display: flex;
-    justify-content: center;
-}
-.gallery-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 70%;
-    max-width: 2664px;
-}
-.gallery-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.gallery-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.gallery-img :nth-child(6) ~ :nth-child(n) {
-    display: none;
-}
-.show-more-btn:hover {
-    
-    display: none;
-}
-
-.section-divider {
-    width: 70%;
-    margin: 100px;
-    background: linear-gradient(to right, transparent, #000000, transparent);
-}
-
-/*지도*/
-.info {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-}
-.info-content {
-    width: 70%;
-    max-width: 2664px;
-}
-.info-txt {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-}
-
-/*구독 모달*/
-.subscribe {
-    display: flex;
-    justify-content: center;
-
-    height: 340px;
-    width: 100%;
-
-    background-image: url("img/img_5.png");
-    background-size: auto;
-    background-repeat: repeat;
-    background-position: center;
-}
-.subscribe-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: absolute;
-    transform: translate(0%, -50%);
-    z-index: 1;
-
-    width: 70%;
-    max-width: 2664px;
-    height: 200px;
-    border-radius: 30px;
-    background: #263140;
-}
-.subscribe-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-shrink: 0;
-
-    width: 471px;
-    height: 99px;
-    margin-left: 50px;
-    color: #FFFFFF;
-}
-.subscribe-text-main {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 45px;
-    text-align: left;
-}
-.subscribe-text-sub {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: left;
-
-}
-#e-mail {
-    width: 530px;
-    height: 60px;
-    border-radius: 60px;
-    text-align: left;
-}
-form {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    margin-right: 50px;
-}
-.subscribe-btn {
-    /*공통 클래스 color-button*/
-    position: absolute;
-    transform: translate(-5%, 0%);
-    z-index: 1;
-}
-.scroll-top-btn {
-    position: fixed;
-    top: 90%;
-    left: 90%;
-    z-index: 9;
-
-    border: none;
-    background-color: transparent;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 .scroll-top-btn img:hover {
     content: url("img/scroll-top-btn.png");
-}
-
-/*푸터*/
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    padding: 45px 0;
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 70%;
 }
 
 /*모달*/
@@ -344,4 +95,11 @@ footer {
     justify-content: space-between;
 
     height: 90%;
+}
+.real-form {
+    display: flex;
+
+}
+.real-form input{
+    display: none;
 }
