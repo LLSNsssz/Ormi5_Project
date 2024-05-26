@@ -1,0 +1,268 @@
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 100%;
+    }
+
+    /*헤더*/
+    .header-nav {
+        display: none;
+    }
+
+    .header-content {
+        width: 90%;
+    }
+
+    .header-nav-toggle {
+        position: fixed;
+        width: 70%;
+        height: 100%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        z-index: 13;
+
+        background-color: #263140;
+    }
+
+    .header-close-menu {
+        padding: 31px;
+
+        border: none;
+        background-color: transparent;
+    }
+
+    .header-nav-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        height: 30%;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .header-btn-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border: none;
+        background-color: transparent;
+    }
+
+    .header-nav-link {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .header-nav-link li a {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        text-align: left;
+
+
+        color: white;
+    }
+
+    /*메인*/
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content * {
+        gap: 30px;
+        width: 100%;
+
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 0;
+    }
+
+    .hero-text-main {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .hero-text-sub {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 70%;
+    }
+
+    .color-button {
+        width: 140px;
+    }
+
+
+    .features {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .features-content {
+        width: 90%;
+    }
+
+    .features-text {
+        gap: 30px;
+    }
+
+    .features-text-main {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .features-text-sub {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .features-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*갤러리*/
+    .gallery-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        width: 90%;
+
+    }
+
+    .gallery-img {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .info-content {
+        width: 90%;
+    }
+
+    .section-divider {
+        width: 90%;
+    }
+
+    .subscribe {
+        margin-top: 200px;
+
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .subscribe-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+
+        transform: translate(0%, -70%);
+
+        box-sizing: border-box;
+        padding: 25px 0;
+        height: auto;
+        width: 90%;
+
+    }
+    .subscribe-text {
+        gap: 30px;
+    }
+    .subscribe-text-main {
+        width: 80%;
+    }
+
+    .fake-form {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 10px;
+
+        width: 80%;
+        margin: 0;
+    }
+
+    .subscribe-btn {
+        position: static;
+    }
+
+/*푸터 */
+    footer {
+        display: flex;
+        justify-content: space-between;
+
+        width: 90%;
+        height: 100%;
+        margin: 0 auto 20px;
+        padding: 0;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer-nav-mobile {
+        display: flex;
+        height: 100%;
+
+    }
+
+    .footer-link-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+
+        height: 100%;
+
+    }
+
+    .footer-link-mobile a {
+        text-decoration: none;
+        color: #767676;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .modal {
+        width: 300px;
+        height: 300px;
+    }
+}

@@ -3,9 +3,9 @@
 /*푸터*/
 footer {
     display: flex;
-    align-items: center;
     justify-content: center;
 
+    box-sizing: border-box;
     width: 100%;
     padding: 45px 0;
 }
@@ -16,4 +16,7 @@ footer {
     justify-content: space-between;
 
     width: 70%;
+}
+.footer-nav-mobile {
+    display: none;
 }

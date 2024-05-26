@@ -1,8 +1,8 @@
-
 /*메인*/
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     flex: 1;
 }
@@ -13,176 +13,194 @@ main {
     justify-content: center;
 
     background: #F2E9D8;
+    width: 100%;
 }
+
 .hero-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    width: 70%;
+    width: 66%;
     max-width: 2664px;
 }
+
 /*고양이 옆 텍스트*/
 .hero-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 30px;
 
-    gap: 50px;
+    margin-top: 140px;
 }
-/*고양이 사진*/
-.hero-image {
-    display: flex;
-    align-items: flex-end;
-}
+
 .hero-text-main {
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
     width: 695px;
 }
+
 .hero-text-sub {
     width: 420px;
 }
-@media (max-width: 768px) {
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
-    .hero-content * {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-        gap: 50px;
-
-        text-align: center;
-
-    }
+/*고양이 사진*/
+.hero-image {
+    display: flex;
+    align-items: flex-end;
 }
-
 
 /*둘째 섹션*/
 .features {
     display: flex;
     justify-content: center;
+
+    width: 100%;
+    margin: 50px 0 100px 0;
 }
 
 .features-content {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 
-    width: 70%;
-    max-width: 2664px;
+    width: 66%;
 }
-.features-txt {
+.features-text {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    flex: 1;
 
-    gap: 100px;
 }
-@media (max-width: 768px) {
-    .features-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .features-content * {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        width: 100%;
-        gap: 50px;
-
-        text-align: center;
-
-    }
+.features-text-main {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: left;
 }
+.features-image img {
+    width: 100%;
+}
+
+
 
 /*사진 모음*/
 .gallery {
     display: flex;
     justify-content: center;
+
+    width: 100%;
+    margin-bottom: 100px;
+
 }
+
 .gallery-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 70%;
+    width: 66%;
     max-width: 2664px;
 }
+
 .gallery-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
+
+.gallery-txt-main {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    color: #D97652;
+}
+
+.gallery-txt-sub {
+    text-align: center;
+}
+
 .gallery-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
+    gap: 30px;
+
+    width: 100%;
+    margin: 50px 0;
 }
+
 .gallery-img li img {
     width: 100%;
-    height: 100%;
-    border-radius: 30px;
+
+    border-radius: 50px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 }
-li {
-    list-style: none;
-}
+
 .img-width {
 
 }
 
-@media (max-width: 768px) {
 
-    .gallery-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+.show-more-text {
+    margin-bottom: 10px;
 
-        width: 120%;
-
-        text-align: center;
-
-    }
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
 }
+
 .section-divider {
-    width: 70%;
-    margin: 100px;
-    background: linear-gradient(to right, transparent, #000000, transparent);
-}
+    background: #C4C4C4;
 
+    height: 1px;
+    width: 66%;
+}
 
 /*지도*/
 .info {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
 
+    margin: 100px 0;
+    width: 100%;
 }
+
 .info-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    gap: 10px;
+
+
+    width: 66%;
     max-width: 2664px;
 }
+
 .info-txt {
     display: flex;
     flex-direction: column;
 
     width: 100%;
 }
+
+.info-text-strong {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+}
+
 .map {
     border-radius: 12px;
 }
@@ -194,13 +212,15 @@ li {
 
     height: 340px;
     width: 100%;
+    margin-top: 100px;
 
     background-image: url("img/img_5.png");
     background-size: auto;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
 }
-.subscribe-content{
+
+.subscribe-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -209,12 +229,13 @@ li {
     transform: translate(0%, -50%);
     z-index: 1;
 
-    width: 70%;
+    width: 66%;
     max-width: 2664px;
     height: 200px;
     border-radius: 30px;
     background: #263140;
 }
+
 .subscribe-text {
     flex: 1;
     display: flex;
@@ -226,12 +247,14 @@ li {
     margin: 0 50px;
     color: #FFFFFF;
 }
+
 .subscribe-text-main {
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     text-align: left;
 }
+
 .subscribe-text-sub {
     font-size: 14px;
     font-weight: 400;
@@ -239,6 +262,7 @@ li {
     text-align: left;
 
 }
+
 .fake-form {
     flex: 1;
     display: flex;
@@ -247,6 +271,7 @@ li {
 
     margin-right: 50px;
 }
+
 .fake-input {
     text-indent: 40px;
     width: 100%;
@@ -254,6 +279,7 @@ li {
     border-radius: 60px;
     text-align: left;
 }
+
 ::placeholder {
     background-image: url("img/mail.svg");
     background-position: 10px center;
@@ -267,10 +293,11 @@ li {
     transform: translate(-5%, 0%);
     z-index: 1;
 }
+
 .scroll-top-btn {
     position: fixed;
     top: 90%;
-    left: 90%;
+    left: 89%;
     z-index: 9;
 
     border: none;
@@ -279,23 +306,5 @@ li {
     background-repeat: no-repeat;
     background-position: center;
 }
-@media (max-width: 768px) {
-    .subscribe-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
-    .features-content * {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-        width: 130%;
-        gap: 50px;
-
-        text-align: center;
-
-    }
-}

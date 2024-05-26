@@ -1,4 +1,3 @@
-
 /*헤더*/
 header {
     display: flex;
@@ -6,31 +5,25 @@ header {
 
     padding: 31px 0;
     background: #F2E9D8;
-
 }
+
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 70%;
+    width: 66%;
 }
-.header-nav {
+
+.header-nav-content {
     display: flex;
     align-items: center;
 }
-.header-nav-mobile {
+
+.header-btn-mobile {
     display: none;
 }
-@media (max-width: 768px) {
-    .header-nav {
-        display: none;
-    }
-    .header-nav-mobile {
-        display: flex;
-        align-items: center;
-    }
-}
+
 .header-nav-link {
     display: flex;
     justify-content: space-around;
@@ -38,7 +31,11 @@ header {
     width: 205px;
     padding-right: 50px;
 }
+
 .header-nav-link a {
     text-decoration: none;
     color: #000000;
+}
+.header-close-menu {
+    display: none;
 }
