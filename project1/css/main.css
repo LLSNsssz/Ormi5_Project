@@ -211,7 +211,7 @@ main {
     width: 100%;
     margin-top: 100px;
 
-    background-image: url("/img/img_5.png");
+    background-image: url("../img/img_5.png");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -278,7 +278,7 @@ main {
 }
 
 ::placeholder {
-    background-image: url("/img/mail.svg");
+    background-image: url("../img/mail.svg");
     background-position: 10px center;
     background-repeat: no-repeat;
 }
