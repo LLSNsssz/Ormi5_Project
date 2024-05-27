@@ -1,0 +1,23 @@
+
+
+/*푸터*/
+footer {
+    display: flex;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1256px;
+    width: 66%;
+}
+.footer-nav-mobile {
+    display: none;
+}
