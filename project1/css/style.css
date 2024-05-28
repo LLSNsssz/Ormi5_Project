@@ -88,7 +88,7 @@ body {
     height: 400px;
     border-radius: 30px;
 
-    background-image: url("img/modal.png");
+    background-image: url("../img/modal.png");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
