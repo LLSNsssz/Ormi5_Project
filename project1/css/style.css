@@ -54,7 +54,7 @@ body {
 }
 
 .scroll-top-btn img:hover {
-    content: url("img/scroll-top-btn.png");
+    content: url("../img/scroll-top-btn.png");
 }
 
 /*모달*/
